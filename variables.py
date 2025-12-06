@@ -16,7 +16,15 @@ height_cm = 173.5
 is_learning_python = True
 
 # List (mutable collection)
-skills = ["Python", "HTML", "Git"]
+skills = [
+    "Python",
+    "HTML",
+    "Git",
+    "AI Basics",
+    "Prompt Engineering",
+    "Automation with Python",
+    "Problem Solving"
+]
 
 # Dictionary (key-value data)
 profile = {
