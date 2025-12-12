@@ -1,0 +1,83 @@
+PYTHON REGULAR EXPRESSION QUICK GUIDE
+-------------------------------------
+
+ANCHORS
+^        Start of line or string
+$        End of line or string
+
+BASIC TOKENS
+.        Any character except newline
+\s       Whitespace (space, tab, newline)
+\S       Non-whitespace
+\d       Digit (0–9)
+\D       Not a digit
+\w       Word character (letter, digit, underscore)
+\W       Not a word character
+\b       Word boundary
+\B       Not a word boundary
+
+QUANTIFIERS
+*        0 or more times
+*?       0 or more times (non-greedy)
++        1 or more times
++?       1 or more times (non-greedy)
+{n}      Exactly n times
+{n,}     At least n times
+{n,m}    Between n and m times
+
+CHARACTER SETS
+[aeiou]     Any vowel
+[^XYZ]      Any character except X, Y, or Z
+[a-z0-9]    Character range (a to z, 0 to 9)
+
+GROUPS AND CAPTURING
+(abc)          Capture group
+(?:abc)        Non-capturing group
+(?P<name>abc)  Named capture group
+\1             Backreference to first group
+(a|b)          Alternation – match "a" or "b"
+
+LOOKAROUNDS
+(?=...)   Positive lookahead
+(?!...)   Negative lookahead
+(?<=...)  Positive lookbehind
+(?<!...)  Negative lookbehind
+
+GREEDY VS NON-GREEDY
+.+       Greedy – matches as much as possible
+.+?      Non-greedy – matches as little as possible
+
+ESCAPES
+\.        Match a literal dot
+\*        Match a literal asterisk
+\+        Match a literal plus
+\?        Match a literal question mark
+\\        Escape the backslash itself
+
+IMPORTANT PYTHON NOTES
+Use raw strings for regex: r"pattern"
+
+Common functions:
+re.search()    Find first match
+re.findall()   Return all matches
+re.match()     Match only at start of string
+re.sub()       Replace text using regex
+re.split()     Split text by regex
+re.compile()   Store compiled pattern
+
+REGEX FLAGS
+re.IGNORECASE or re.I     Ignore case
+re.MULTILINE or re.M      ^ and $ match every line
+re.DOTALL or re.S         . matches newline
+re.VERBOSE                Multiline readable regex with comments
+
+COMMON MINI-PATTERNS
+Email:        [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}
+Phone:        \d{10}
+URL:          https?://\S+
+Date:         \d{2}[/-]\d{2}[/-]\d{4}
+Words only:   [A-Za-z]+
+
+-------------------------------------
+END OF QUICK GUIDE
+-------------------------------------
